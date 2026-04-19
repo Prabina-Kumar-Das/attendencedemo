@@ -83,12 +83,11 @@ app.use(cookieParser())
 
 app.use(cors({
   origin: [
-    "https://attendance-mocha-omega.vercel.app",
-    "http://localhost:5173",
-    "http://localhost:4173"
+    "https://attendencedemo.vercel.app", 
+    "http://localhost:5173"
   ],
   credentials: true
-}))
+}));
 
 // 5. Protect ALL /api/admin/* routes with JWT cookie auth
 app.use("/api/admin", authMiddleware)
